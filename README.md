@@ -50,7 +50,7 @@ Un IDE compatible con Java (Visual Studio Code, IntelliJ IDEA o Eclipse).
 1. Clonar el repositorio
 Abre tu terminal y ejecuta el siguiente comando para descargar el código a tu computadora:
 
-##Bash
+## Bash
 git clone https://github.com/TU_USUARIO/proyecto-citas-javafx.git
 
 2. Abrir el proyecto
@@ -63,7 +63,7 @@ Opción A (Recomendada en VS Code): Ve al archivo src/main/java/mx/uacam/fi/its/
 
 Opción B (Por Terminal): Abre la terminal en la raíz del proyecto y utiliza el comando:
 
-##Bash
+## Bash
 mvn javafx:run
 Características de la Interfaz
 Flujo por etapas: Pantalla de privacidad, registro mínimo, feed principal, contacto, bandeja de entrada y perfil detallado.
