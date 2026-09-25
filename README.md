@@ -1,12 +1,14 @@
-Maqueta de Aplicación de Citas - JavaFX
-Este proyecto es una maqueta funcional de la interfaz gráfica para una aplicación de citas, desarrollada con JavaFX y gestionada a través de Maven. Fue construida para la asignatura de Programación Avanzada de la Facultad de Ingeniería de la Universidad Autónoma de Campeche (UACAM).
+# Maqueta de Aplicación de Citas - JavaFX
+
+Este proyecto es una maqueta funcional de la interfaz gráfica para una aplicación de citas, desarrollada con **JavaFX** y gestionada a través de **Maven**. Fue construida para la asignatura de Programación Avanzada de la Facultad de Ingeniería de la Universidad Autónoma de Campeche (UACAM).
 
 El sistema se enfoca en la navegación por etapas, validación de diseño (UI/UX) con un estilo moderno, uso de tarjetas flotantes y gestión de sesión básica entre múltiples vistas.
 
- Estructura del Proyecto
+## Estructura del Proyecto
+
 El proyecto sigue la estructura estándar de Maven:
 
-Plaintext
+```text
 proyecto-citas/
 ├── pom.xml                     # Configuración de Maven y dependencias (JavaFX)
 ├── README.md                   # Documentación del proyecto
@@ -33,7 +35,9 @@ proyecto-citas/
                 ├── Privacy.fxml
                 ├── Profile.fxml
                 └── Register.fxml
-🚀 Requisitos Previos
+```
+
+## Requisitos Previos
 Para ejecutar este proyecto en tu entorno local, necesitas tener instalado:
 
 Java Development Kit (JDK) 17 o superior.
@@ -42,12 +46,13 @@ Apache Maven.
 
 Un IDE compatible con Java (Visual Studio Code, IntelliJ IDEA o Eclipse).
 
-📥 Cómo descargar y ejecutar el proyecto
+## Cómo descargar y ejecutar el proyecto
 1. Clonar el repositorio
 Abre tu terminal y ejecuta el siguiente comando para descargar el código a tu computadora:
 
-Bash
+##Bash
 git clone https://github.com/TU_USUARIO/proyecto-citas-javafx.git
+
 2. Abrir el proyecto
 Abre la carpeta clonada en tu editor de código preferido (ej. Visual Studio Code). El IDE debería detectar automáticamente el archivo pom.xml y descargar las dependencias necesarias de JavaFX de forma automática.
 
@@ -58,7 +63,7 @@ Opción A (Recomendada en VS Code): Ve al archivo src/main/java/mx/uacam/fi/its/
 
 Opción B (Por Terminal): Abre la terminal en la raíz del proyecto y utiliza el comando:
 
-Bash
+##Bash
 mvn javafx:run
 Características de la Interfaz
 Flujo por etapas: Pantalla de privacidad, registro mínimo, feed principal, contacto, bandeja de entrada y perfil detallado.
