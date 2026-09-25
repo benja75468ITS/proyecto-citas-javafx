@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uacam.fi.its.pa.controllers.MainFeedController" styleClass="root">
+    
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-padding: 20 40 10 40; -fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2);">
+            <Label fx:id="welcomeLabel" text="¡Hola!" styleClass="window-title" style="-fx-text-fill: #333333;"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="MI PERFIL" onAction="#goToProfile" styleClass="btn-secondary" />
+            <Button text="MENSAJES" onAction="#goToInbox" styleClass="btn-secondary" />
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox spacing="30" alignment="TOP_CENTER" style="-fx-padding: 30 40 40 40;">
+            
+            <HBox spacing="15" alignment="CENTER" styleClass="card" style="-fx-padding: 15;">
+                <Label text="BÚSQUEDA:" styleClass="text-body" style="-fx-font-weight: bold;"/>
+                <ComboBox fx:id="genderFilter" promptText="Género" />
+                <TextField fx:id="ageFilter" promptText="Edad máx." prefWidth="100" />
+                <Button text="FILTRAR" onAction="#applyFilters" styleClass="btn-primary" />
+            </HBox>
+
+            <HBox spacing="30" alignment="CENTER">
+                <!-- Dummy 1 -->
+                <VBox spacing="10" alignment="CENTER" styleClass="card" prefWidth="220">
+                    <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                        <image><Image url="@../images/default.png" /></image>
+                    </ImageView>
+                    <Label text="VALERIA, 21" styleClass="window-title" style="-fx-font-size: 20px; -fx-padding: 5 0 0 0;" />
+                    <Label text="A 2 km de ti" styleClass="text-body" />
+                    <Label text="Intereses: Diseño UI" styleClass="text-body" style="-fx-text-fill: #888888;"/>
+                    <Button text="CONTACTAR" onAction="#contactPerson" styleClass="btn-primary" style="-fx-margin-top: 15px;" />
+                </VBox>
+
+                <!-- Dummy 2 -->
+                <VBox spacing="10" alignment="CENTER" styleClass="card" prefWidth="220">
+                    <ImageView fitWidth="100" fitHeight="100" preserveRatio="true">
+                        <image><Image url="@../images/default.png" /></image>
+                    </ImageView>
+                    <Label text="CARLOS, 23" styleClass="window-title" style="-fx-font-size: 20px; -fx-padding: 5 0 0 0;" />
+                    <Label text="A 5 km de ti" styleClass="text-body" />
+                    <Label text="Intereses: Hardware" styleClass="text-body" style="-fx-text-fill: #888888;"/>
+                    <Button text="CONTACTAR" onAction="#contactPerson" styleClass="btn-primary" style="-fx-margin-top: 15px;" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

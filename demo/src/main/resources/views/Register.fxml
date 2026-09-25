@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uacam.fi.its.pa.controllers.RegisterController" styleClass="root">
+    
+    <VBox alignment="CENTER" spacing="20.0" styleClass="card" maxWidth="450">
+        <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+        </padding>
+
+        <Label text="CREA TU PERFIL" styleClass="window-title" />
+        <Label text="Ingresa tus datos para empezar a conectar." styleClass="text-body" />
+
+        <VBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10 0 10 0;">
+            <Label text="FOTO DE PERFIL" styleClass="text-body" style="-fx-font-weight: bold;"/>
+            <!-- Componente de imagen real -->
+            <ImageView fx:id="profileImage" fitWidth="120" fitHeight="120" preserveRatio="true">
+                <image>
+                    <Image url="@../images/default.png" />
+                </image>
+            </ImageView>
+            <Button text="ELEGIR FOTO DE ARCHIVOS" onAction="#uploadPhoto" styleClass="btn-secondary" />
+        </VBox>
+
+        <VBox spacing="5.0" alignment="CENTER_LEFT">
+            <Label text="¿CÓMO TE LLAMAS?" styleClass="text-body" style="-fx-font-weight: bold;"/>
+            <TextField fx:id="nameField" promptText="Ej. Alberto" prefWidth="300" />
+        </VBox>
+
+        <VBox spacing="5.0" alignment="CENTER_LEFT">
+            <Label text="CÓDIGO POSTAL:" styleClass="text-body" style="-fx-font-weight: bold;"/>
+            <TextField fx:id="zipCodeField" promptText="Ej. 24000" prefWidth="300" />
+        </VBox>
+                  
+        <Button text="ENTRAR A LA APP" onAction="#completeRegistration" styleClass="btn-primary" style="-fx-margin-top: 15px;" prefWidth="300"/>
+    </VBox>
+</VBox>
