@@ -26,9 +26,10 @@ public class MainFeedController {
 
     @FXML
     void applyFilters(ActionEvent event) {
+        String interestText = (interestFilter != null) ? interestFilter.getText() : "";
         System.out.println("Aplicando filtros: Género=" + genderFilter.getValue() + 
                            ", Edad=" + ageFilter.getText() + 
-                           ", Interés=" + interestFilter.getText());
+                           ", Interés=" + interestText);
     }
 
     @FXML
@@ -45,5 +46,21 @@ public class MainFeedController {
     @FXML
     void goToProfile(ActionEvent event) {
         SceneManager.switchScene("Profile.fxml", "Editar Mi Perfil");
+    }
+
+    @FXML
+    void goToTeam(ActionEvent event) {
+        try {
+            javafx.fxml.FXMLLoader loader = new javafx.fxml.FXMLLoader(getClass().getResource("/views/TeamView.fxml"));
+            javafx.scene.Parent root = loader.load();
+            
+            javafx.stage.Stage stage = (javafx.stage.Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new javafx.scene.Scene(root));
+            stage.setTitle("Integrantes del Equipo");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error al cargar la vista de equipo: " + e.getMessage());
+        }
     }
 }

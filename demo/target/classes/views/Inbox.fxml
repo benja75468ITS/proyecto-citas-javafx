@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uacam.fi.its.pa.controllers.InboxController" styleClass="root">
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-padding: 20 40 10 40; -fx-background-color: white;">
+            <Button text="← VOLVER" onAction="#goBack" styleClass="btn-secondary" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="BANDEJA DE ENTRADA" styleClass="window-title" />
+        </HBox>
+    </top>
+    
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 40;">
+            
+            <VBox fx:id="messageBox" spacing="15" styleClass="card" maxWidth="500">
+                <Label text="NUEVA SOLICITUD DE: ROYFRAN" styleClass="text-body" style="-fx-font-weight: bold; -fx-text-fill: #FF4B72;"/>
+                <Label text="Medio propuesto: Telegram" styleClass="text-body" />
+                <Label text="Mensaje: ¡Hola! Vi que también te interesa la programación en C. ¿Hablamos?" styleClass="text-body" wrapText="true"/>
+                
+                <Label fx:id="contactInfoLabel" text="Contacto revelado: @royfran_dev" styleClass="text-body" style="-fx-text-fill: #333333; -fx-font-weight: bold;" visible="false" managed="false"/>
+                
+                <HBox fx:id="actionButtons" spacing="15" alignment="CENTER_LEFT" style="-fx-padding: 10 0 0 0;">
+                    <Button text="RECHAZAR" onAction="#rejectRequest" styleClass="btn-secondary" />
+                    <Button text="ACEPTAR SOLICITUD" onAction="#acceptRequest" styleClass="btn-primary" />
+                </HBox>
+            </VBox>
+
+        </VBox>
+    </center>
+</BorderPane>

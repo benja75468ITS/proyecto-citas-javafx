@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uacam.fi.its.pa.controllers.PrivacyController" styleClass="root">
+    
+    <VBox alignment="CENTER" spacing="20.0" styleClass="card" maxWidth="550">
+        <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+        </padding>
+
+        <Label text="AVISO DE PRIVACIDAD" styleClass="window-title" />
+        
+        <Label text="Para utilizar este servicio, recopilaremos datos personales (ubicación y foto) con el fin de encontrar perfiles afines. Esta información podría usarse para generar perfiles publicitarios.&#10;&#10;Al continuar, usted confirma que está de acuerdo de manera explícita con el uso de sus datos para los fines mencionados." 
+               wrapText="true" styleClass="text-body" textAlignment="JUSTIFY" />
+                  
+        <HBox alignment="CENTER" spacing="30.0" style="-fx-padding: 20 0 0 0;">
+            <Button text="NO ACEPTO" onAction="#declineTerms" styleClass="btn-secondary" />
+            <Button text="SÍ, ACEPTO" onAction="#acceptTerms" styleClass="btn-primary" />
+        </HBox>
+    </VBox>
+</VBox>
