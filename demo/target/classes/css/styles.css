@@ -1,0 +1,65 @@
+.root {
+    -fx-background-color: #F4F7F6;
+}
+
+.window-title {
+    -fx-font-family: "Arial Black", sans-serif;
+    -fx-font-size: 26px;
+    -fx-text-fill: #FF4B72;
+    -fx-padding: 10 0 20 0;
+}
+
+.text-body {
+    -fx-font-family: "Helvetica", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+/* Tarjeta flotante para centrar el contenido y que se vea limpio */
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 15, 0, 0, 5);
+    -fx-padding: 30px;
+}
+
+/* Botones */
+.btn-primary {
+    -fx-background-color: #FF4B72;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Arial Black", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-radius: 25px;
+    -fx-padding: 12 25;
+    -fx-cursor: hand;
+}
+.btn-primary:hover { -fx-background-color: #E03A5F; }
+
+.btn-secondary {
+    -fx-background-color: #E2E8F0;
+    -fx-text-fill: #333333;
+    -fx-font-family: "Arial Black", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-radius: 25px;
+    -fx-padding: 12 25;
+    -fx-cursor: hand;
+}
+.btn-secondary:hover { -fx-background-color: #CBD5E1; }
+
+/* Entradas de texto y ComboBox */
+.text-area, .text-field, .combo-box {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #333333;
+    -fx-border-color: #CBD5E1;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 8px;
+}
+.combo-box .list-cell {
+    -fx-text-fill: #333333;
+    -fx-background-color: transparent;
+}
+.text-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: #FF4B72;
+}
